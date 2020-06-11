@@ -42,4 +42,13 @@ public class Person {
         this.spouse = null;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "man=" + man +
+                ", name='" + name + '\'' +
+                ", spouse=" + (spouse != null ? spouse.name : "null") +
+                '}';
+    }
 }
