@@ -5,7 +5,7 @@ public class Person {
     private final String name;
     private Person spouse;
 
-    public Person(boolean man, String name) {
+    public Person(boolean man, String name, Person spouse) {
         this.man = man;
         this.name = name;
     }
@@ -18,6 +18,16 @@ public class Person {
      *      
      */
     public boolean marry(Person person) {
+        if (this.man != person.man) {
+            if (this.spouse != null | person.spouse != null) {
+                this.divorce();
+                person.divorce();
+            }
+            this.spouse = person;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -25,5 +35,11 @@ public class Person {
      *      * @return true - if person status has been changed
      *      
      */
-    public boolean divorce() {}
+    public boolean divorce() {
+        if (this.spouse != null) {
+            this.spouse = null;
+            return true;
+        }
+        return false;
+    }
 }
