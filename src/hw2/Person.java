@@ -5,7 +5,7 @@ public class Person {
     private final String name;
     private Person spouse;
 
-    public Person(boolean man, String name, Person spouse) {
+    public Person(boolean man, String name) {
         this.man = man;
         this.name = name;
     }
@@ -39,7 +39,8 @@ public class Person {
         if (this.spouse != null) {
             this.spouse = null;
             return true;
+        }   else {
+            return false;
         }
-        return false;
     }
 }
