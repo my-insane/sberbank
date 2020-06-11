@@ -27,6 +27,7 @@ public class Person {
                     person.divorce();
                 }
                 this.spouse = person;
+                person.spouse = this;
             }
         }
         return false;
