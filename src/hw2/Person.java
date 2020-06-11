@@ -19,9 +19,7 @@ public class Person {
      */
     public boolean marry(Person person) {
         if (this.man != person.man) {
-            if (this.spouse == person) {
-                return true;
-            } else {
+            if (this.spouse != person) {
                 if (this.spouse != null) {
                     this.divorce();
                 }
@@ -29,8 +27,8 @@ public class Person {
                     person.divorce();
                 }
                 this.spouse = person;
-                return true;
             }
+            return true;
         } else {
             return false;
         }
