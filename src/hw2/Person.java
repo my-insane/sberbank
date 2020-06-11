@@ -19,14 +19,18 @@ public class Person {
      */
     public boolean marry(Person person) {
         if (this.man != person.man) {
-            if (this.spouse != null) {
-                this.divorce();
+            if (this.spouse == person) {
+                return true;
+            } else {
+                if (this.spouse != null) {
+                    this.divorce();
+                }
+                if (person.spouse != null) {
+                    person.divorce();
+                }
+                this.spouse = person;
+                return true;
             }
-            if (person.spouse != null){
-                person.divorce();
-            }
-            this.spouse = person;
-            return true;
         } else {
             return false;
         }
@@ -38,12 +42,8 @@ public class Person {
      *      
      */
     public boolean divorce() {
-        if (this.spouse != null) {
-            this.spouse.spouse = null;
-            this.spouse = null;
-            return true;
-        }   else {
-            return false;
-        }
+        this.spouse.spouse = null;
+        this.spouse = null;
+        return true;
     }
 }
