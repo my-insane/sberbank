@@ -28,10 +28,8 @@ public class Person {
                 }
                 this.spouse = person;
             }
-            return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     /**
