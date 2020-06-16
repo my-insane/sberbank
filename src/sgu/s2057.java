@@ -4,10 +4,6 @@ import java.util.*;
 import java.io.*;
 
 public class s2057 {
-    public boolean delete () {
-
-        return true;
-    }
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         HashMap<Integer, Integer> fr = new HashMap<>();
@@ -34,6 +30,14 @@ public class s2057 {
             }
         }
     }
+//    public boolean delete () {
+//
+//        return true;
+//    }
+//    public boolean add(Integer value) {
+//
+//        return true;
+//    }
 }
 
 
