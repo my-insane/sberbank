@@ -1,6 +1,8 @@
 package sgu;
 
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 import java.io.*;
 
@@ -38,6 +40,24 @@ public class s2057 {
             }
         }
     }
+//    private void add(int num) {
+//        if (fr.containsKey(num)) {
+//            int counter = fr.get(num) + 1;
+//            fr.replace(num, counter);
+//        } else fr.put(num, 1);
+//    }
+//    private void delete(int num) {
+//        for (int key: fr.keySet()) {
+//            int q = fr.getOrDefault(key, 0) - 1;
+//            if (q <= 0) {
+//                fr.remove(key);
+//            } else {
+//                fr.replace(key, q);
+//            }
+//            System.out.println(key);
+//            break;
+//        }
+//    }
 }
 
 
