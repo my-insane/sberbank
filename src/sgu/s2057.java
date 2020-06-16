@@ -41,10 +41,10 @@ public class s2057 {
         }
     }
 //    private void add(int num) {
-//        if (fr.containsKey(num)) {
-//            int counter = fr.get(num) + 1;
-//            fr.replace(num, counter);
-//        } else fr.put(num, 1);
+//        if (this.containsKey(num)) {
+//            int counter = this.get(num) + 1;
+//            this.replace(num, counter);
+//        } else this.put(num, 1);
 //    }
 //    private void delete(int num) {
 //        for (int key: fr.keySet()) {
